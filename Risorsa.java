@@ -3,7 +3,7 @@ public class Risorsa{
     private int annoPubblicazione;
     private String codice;
 
-    public Risorsa(String titolo, int annoPubblicazione, String codice) {
+    public Risorsa(String titolo, int annoPubblicazione, String codice) {//metodo costruttore parametrico
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
         this.codice = codice;

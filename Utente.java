@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Utente{
-    private String nome;
+    private String nome;//dichiarazione attributi
     private String idUtente;
     public ArrayList<Risorsa> risorseInPrestito = new ArrayList<>();
 
-    public Utente(String nome, String idUtente){
+    public Utente(String nome, String idUtente){//metodo costruttore
         this.nome=nome;
         this.idUtente = idUtente;
     }
@@ -26,7 +26,8 @@ public class Utente{
         this.idUtente = idUtente;
     }
 
-     public void prendiInPrestito(Risorsa risorsa) {
+    //metodo per prendere in prestito una risorsa (aggiunge la risorsa alla lista)
+    public void prendiInPrestito(Risorsa risorsa) {
         if (risorsa != null) {
             risorseInPrestito.add(risorsa);
             System.out.println(nome + " ha preso in prestito: " + risorsa.getTitolo());
@@ -34,7 +35,7 @@ public class Utente{
         }
      
     }
-
+    //metodo per restituire una risorsa (rimuove la risorsa dalla lista)
     public void restituisciRisorsa(Risorsa risorsa) {
         if (risorsa != null) {
             risorseInPrestito.remove(risorsa);
@@ -47,7 +48,7 @@ public class Utente{
        
     }
 
-
+    //metodo di stampa delle risorse prestate
     public void visualizzaRisorsePrestate() {
         System.out.println("Risorse Prestate :" + nome + " ID: " + idUtente);
         if (risorseInPrestito.isEmpty()) {
@@ -55,7 +56,7 @@ public class Utente{
             
         }
         for (Risorsa r : risorseInPrestito) {
-            r.visualizzaDettagli();
+            r.visualizzaDettagli(); //utilizzo metodo visualizza dettagli della classe Risorsa
         }
     }
 }
