@@ -1,9 +1,9 @@
 public class Rivista extends Risorsa {
     private int numeroRivista;
 
-    public Rivista(String titolo, int annoPubblicazione, String codice) {
+    public Rivista(String titolo, int annoPubblicazione, String codice,int numeroRivista) {
         super(titolo, annoPubblicazione, codice);
-        // TODO Auto-generated constructor stub
+        this.numeroRivista = numeroRivista;
     }
 
     public int getNumeroRivista() {

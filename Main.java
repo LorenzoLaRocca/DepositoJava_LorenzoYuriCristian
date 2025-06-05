@@ -27,12 +27,14 @@ public class Main {
                         String titolo = sc.nextLine();
                         int anno = Integer.parseInt(sc.nextLine());
                         String codice = sc.nextLine();
-                        biblioteca.aggiungiRisorsa(new Ebook(titolo, anno, codice));
+                        String formato = sc.nextLine();
+                        biblioteca.aggiungiRisorsa(new Ebook(titolo, anno, codice,formato));
                     } else if (risorsa == 3) {
                         String titolo = sc.nextLine();
                         int anno = Integer.parseInt(sc.nextLine());
                         String codice = sc.nextLine();
-                        biblioteca.aggiungiRisorsa(new Rivista(titolo, anno, codice));                          
+                        int numeroRivista = Integer.parseInt(sc.nextLine());
+                        biblioteca.aggiungiRisorsa(new Rivista(titolo, anno, codice,numeroRivista));                          
                     }
                     break;
                 case 2:
