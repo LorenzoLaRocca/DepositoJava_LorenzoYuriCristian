@@ -55,7 +55,7 @@ public class Utente{
             
         }
         for (Risorsa r : risorseInPrestito) {
-            System.out.println("Titolo: "+r.getTitolo()+" "+" Anno: "+r.getAnnoPubblicazione()+" Codice: "+r.getCodice());
+            r.visualizzaDettagli();
         }
     }
 }
