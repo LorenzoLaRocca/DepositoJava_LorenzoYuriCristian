@@ -30,11 +30,11 @@ public class Biblioteca {
     public void visualizzaDettagli() {                  // Metodo per visualizzare i dettagli della biblioteca
         System.out.println("Nome della biblioteca: " + nome);
         System.out.println("Utenti registrati:");
-        if (listaUtenti.isEmpty()) {
-            System.out.println("Nessun utente registrato.");
+        if (listaRisorseTotali.isEmpty()) {
+            System.out.println("Nessuna risorsa trovata.");
         } else {
-            for (Utente utente : listaUtenti) {         // Itera attraverso la lista degli utenti e stampa i loro dettagli
-                System.out.println("Nome: " + utente.getNome() + ", ID Utente: " + utente.getIdUtente());
+            for (Risorsa listaR : listaRisorseTotali) {         // Itera attraverso la lista degli utenti e stampa i loro dettagli
+                 listaR.visualizzaDettagli();   
             }
         }
     }
@@ -42,8 +42,9 @@ public class Biblioteca {
         boolean found = false;                                        // Variabile per verificare se la risorsa è stata trovata      
         for (Risorsa risorsa : listaRisorseTotali) {
             if (risorsa.getTitolo().equalsIgnoreCase(titolo)) {
-                risorsa.visualizzaDettagli();
+                
                 found = true;
+                risorsa.visualizzaDettagli();
                 break;
             }
         }
