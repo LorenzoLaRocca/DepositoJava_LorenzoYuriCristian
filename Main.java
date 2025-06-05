@@ -15,8 +15,11 @@ public class Main {
                     System.out.println("Che tipo di risorsa vuoi inserire? \n1 per Libro \n2 per Ebook \n3 per Rivista");
                     int risorsa = Integer.parseInt(sc.nextLine());
                     if (risorsa == 1) {
+                        System.out.println("Inserisci il Titolo: ");
                         String titolo = sc.nextLine();
+                        System.out.println("Inserisci l'anno: ");
                         int anno = Integer.parseInt(sc.nextLine());
+                        System.out.println("Inserisci il Codice: ");
                         String codice = sc.nextLine();
                         String autore = sc.nextLine();
                         biblioteca.aggiungiRisorsa(new Libro(titolo, anno, codice,autore));
