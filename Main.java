@@ -18,7 +18,8 @@ public class Main {
                         String titolo = sc.nextLine();
                         int anno = Integer.parseInt(sc.nextLine());
                         String codice = sc.nextLine();
-                        biblioteca.aggiungiRisorsa(new Libro(titolo, anno, codice));
+                        String autore = sc.nextLine();
+                        biblioteca.aggiungiRisorsa(new Libro(titolo, anno, codice,autore));
                     } else if (risorsa == 2){
                         String titolo = sc.nextLine();
                         int anno = Integer.parseInt(sc.nextLine());
